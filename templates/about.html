@@ -206,8 +206,9 @@
           <h4>
             Subscribe
           </h4>
-          <form action="#">
-            <input type="text" placeholder="Enter email" />
+          <form action="#" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Enter email" name="email" />
             <button type="submit">
               Subscribe
             </button>

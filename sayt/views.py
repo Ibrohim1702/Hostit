@@ -65,9 +65,15 @@ def contact(requests):
 
 
 def price(requests):
-    ctx = {
-
-    }
+    ctx = {}
+    if requests.POST:
+        email = requests.POST.get('email')
+        Subscribe.objects.create(
+            email=email
+        )
+        ctx = {
+            "email": email
+        }
     return render(requests, "price.html", ctx)
 
 
