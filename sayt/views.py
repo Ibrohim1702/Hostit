@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+from sayt.models import Contact
+
+
 # Create your views here.
 
 def index(requests):
