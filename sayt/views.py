@@ -1,9 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-from sayt.models import Contact
+from sayt.models import Contact, Subscribe
 
 
 # Create your views here.
+
+
+
+
 
 def index(requests):
     ctx = {}
@@ -15,18 +19,30 @@ def index(requests):
         Contact.objects.create(
             name=name, message=message, phone=phone, email=email
         )
+    if requests.POST:
+        email = requests.POST.get('email')
+        Subscribe.objects.create(
+            email=email
+        )
 
         ctx = {
             "contact": contact,
+            "email": email
 
         }
     return render(requests, "index.html", ctx)
 
 
 def about(requests):
-    ctx = {
-
-    }
+    ctx = {}
+    if requests.POST:
+        email = requests.POST.get('email')
+        Subscribe.objects.create(
+            email=email
+        )
+        ctx = {
+            "email": email
+        }
     return render(requests, "about.html", ctx)
 
 
@@ -56,9 +72,15 @@ def price(requests):
 
 
 def service(requests):
-    ctx = {
-
-    }
+    ctx = {}
+    if requests.POST:
+        email = requests.POST.get('email')
+        Subscribe.objects.create(
+            email=email
+        )
+        ctx = {
+            "email": email
+        }
     return render(requests, "service.html", ctx)
 
 
