@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 
 <head>
@@ -8,7 +9,7 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
-  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
@@ -17,18 +18,18 @@
 
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
 
 </head>
 
@@ -50,19 +51,19 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html"> About</a>
+                <a class="nav-link" href="{% url 'about' %}"> About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="service.html">Services</a>
+                <a class="nav-link" href="{% url 'service' %}">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="price.html">Pricing</a>
+                <a class="nav-link" href="{% url 'price' %}">Pricing</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
               </li>
             </ul>
             <div class="quote_btn-container">
@@ -112,7 +113,7 @@
                   <div class="row">
                     <div class=" col-lg-10 mx-auto">
                       <div class="img-box">
-                        <img src="images/slider-img.png" alt="">
+                        <img src="{% static 'images/slider-img.png' %}" alt="">
                       </div>
                     </div>
                   </div>
@@ -145,7 +146,7 @@
                   <div class="row">
                     <div class=" col-lg-10 mx-auto">
                       <div class="img-box">
-                        <img src="images/slider-img.png" alt="">
+                        <img src="{% static 'images/slider-img.png' %}" alt="">
                       </div>
                     </div>
                   </div>
@@ -178,7 +179,7 @@
                   <div class="row">
                     <div class=" col-lg-10 mx-auto">
                       <div class="img-box">
-                        <img src="images/slider-img.png" alt="">
+                        <img src="{% static 'images/slider-img.png' %}" alt="">
                       </div>
                     </div>
                   </div>
@@ -217,7 +218,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="box ">
             <div class="img-box">
-              <img src="images/s1.png" alt="">
+              <img src="{% static 'images/s1.png' %}" alt="">
             </div>
             <div class="detail-box">
               <h4>
@@ -237,7 +238,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="box ">
             <div class="img-box">
-              <img src="images/s2.png" alt="">
+              <img src="{% static 'images/s2.png' %}" alt="">
             </div>
             <div class="detail-box">
               <h4>
@@ -257,7 +258,7 @@
         <div class="col-md-6 col-lg-4 ">
           <div class="box ">
             <div class="img-box">
-              <img src="images/s3.png" alt="">
+              <img src="{% static 'images/s3.png' %}" alt="">
             </div>
             <div class="detail-box">
               <h4>
@@ -277,7 +278,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="box ">
             <div class="img-box">
-              <img src="images/s4.png" alt="">
+              <img src="{% static 'images/s4.png' %}" alt="">
             </div>
             <div class="detail-box">
               <h4>
@@ -297,7 +298,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="box ">
             <div class="img-box">
-              <img src="images/s5.png" alt="">
+              <img src="{% static 'images/s5.png' %}" alt="">
             </div>
             <div class="detail-box">
               <h4>
@@ -317,7 +318,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="box ">
             <div class="img-box">
-              <img src="images/s6.png" alt="">
+              <img src="{% static 'images/s6.png' %}" alt="">
             </div>
             <div class="detail-box">
               <h4>
@@ -361,7 +362,7 @@
         </div>
         <div class="col-md-6 ">
           <div class="img-box">
-            <img src="images/about-img.png" alt="">
+            <img src="{% static 'images/about-img.png' %}" alt="">
           </div>
         </div>
 
@@ -379,7 +380,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="img-box">
-            <img src="images/server-img.jpg" alt="">
+            <img src="{% static 'images/server-img.jpg' %}" alt="">
             <div class="play_btn">
               <button>
                 <i class="fa fa-play" aria-hidden="true"></i>
@@ -544,7 +545,7 @@
                 <div class="col-md-10 mx-auto">
                   <div class="box">
                     <div class="img-box">
-                      <img src="images/client.jpg" alt="">
+                      <img src="{% static 'images/client.jpg' %}" alt="">
                     </div>
                     <div class="detail-box">
                       <div class="client_info">
@@ -579,7 +580,7 @@
                 <div class="col-md-10 mx-auto">
                   <div class="box">
                     <div class="img-box">
-                      <img src="images/client.jpg" alt="">
+                      <img src="{% static 'images/client.jpg' %}" alt="">
                     </div>
                     <div class="detail-box">
                       <div class="client_info">
@@ -614,7 +615,7 @@
                 <div class="col-md-10 mx-auto">
                   <div class="box">
                     <div class="img-box">
-                      <img src="images/client.jpg" alt="">
+                      <img src="{% static 'images/client.jpg' %}" alt="">
                     </div>
                     <div class="detail-box">
                       <div class="client_info">
@@ -670,18 +671,19 @@
       <div class="row">
         <div class="col-md-8 col-lg-6 mx-auto">
           <div class="form_container">
-            <form action="">
+            <form action="" method="post">
+              {% csrf_token %}
               <div>
-                <input type="text" placeholder="Your Name" />
+                <input type="text" placeholder="Your Name" name="name"/>
               </div>
               <div>
-                <input type="email" placeholder="Your Email" />
+                <input type="email" placeholder="Your Email" name="email" />
               </div>
               <div>
-                <input type="text" placeholder="Your Phone" />
+                <input type="text" placeholder="Your Phone" name="phone" />
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="text" class="message-box" placeholder="Message" name="message" />
               </div>
               <div class="btn_box ">
                 <button>
@@ -749,23 +751,23 @@
             </h4>
             <div class="info_links">
               <a class="active" href="index.html">
-                <img src="images/nav-bullet.png" alt="">
+                <img src="{% static 'images/nav-bullet.png' %}" alt="">
                 Home
               </a>
               <a class="" href="about.html">
-                <img src="images/nav-bullet.png" alt="">
+                <img src="{% static 'images/nav-bullet.png' %}" alt="">
                 About
               </a>
               <a class="" href="service.html">
-                <img src="images/nav-bullet.png" alt="">
+                <img src="{% static 'images/nav-bullet.png' %}" alt="">
                 Services
               </a>
               <a class="" href="price.html">
-                <img src="images/nav-bullet.png" alt="">
+                <img src="{% static 'images/nav-bullet.png' %}" alt="">
                 Pricing
               </a>
               <a class="" href="contact.html">
-                <img src="images/nav-bullet.png" alt="">
+                <img src="{% static 'images/nav-bullet.png' %}" alt="">
                 Contact Us
               </a>
             </div>
@@ -811,11 +813,11 @@
   <!-- footer section -->
 
   <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
   <!-- custom js -->
-  <script src="js/custom.js"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
 
 
 </body>
